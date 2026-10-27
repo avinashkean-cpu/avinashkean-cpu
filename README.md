@@ -1,54 +1,68 @@
 <div align="center">
 
-  <!-- Custom High-Tech Vector SVG Hero Banner -->
-  <img src="assets/hero-banner.svg" alt="Avinash Mishra - Principal Cloud & DevSecOps Enterprise Architect" width="100%" style="border-radius: 14px; margin-bottom: 12px;" />
+  <!-- Cinematic High-Tech Mesh Infrastructure Hero Banner -->
+  <a href="https://linkedin.com/in/avinashkean">
+    <img src="assets/banner.jpg" alt="Avinash Mishra - Principal Cloud & DevSecOps Enterprise Architect" width="100%" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 210, 255, 0.35); margin-bottom: 14px;" />
+  </a>
 
-  <br/>
-
-  <!-- User's Signature High-Contrast Dual-Tone Skill & Profile Badges -->
+  <!-- Animated Dynamic Neon Typing Title -->
   <p align="center">
-    <img src="https://img.shields.io/badge/CONTROL_PLANE-ONLINE-00D2FF?style=for-the-badge&logo=azurepipelines&logoColor=white&labelColor=2b2d30" alt="Control Plane Online" />
-    &nbsp;
-    <img src="https://img.shields.io/badge/ENTERPRISE_AZURE-CAF_%26_LANDING_ZONES-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white&labelColor=2b2d30" alt="Enterprise Azure CAF" />
+    <a href="https://readme-typing-svg.demolab.com">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=1000&color=00D2FF&center=true&vCenter=true&width=900&height=50&lines=AVINASH+MISHRA;Principal+Cloud+%26+DevSecOps+Enterprise+Architect;13%2B+Years+Engineering+%7C+6%2B+Years+Cloud+%26+DevOps;Azure+Landing+Zone+(CAF)+%26+Zero-Trust+Architect;Production+Terraform+%7C+FinOps+%7C+AIOps+%7C+MLOps" alt="Typing SVG" />
+    </a>
   </p>
 
+  <!-- Interactive 4-Pillar Flagship Production Code Modules -->
   <p align="center">
-    <img src="https://img.shields.io/badge/KUBERNETES-ZERO_TRUST_GITOPS-2563EB?style=for-the-badge&logo=kubernetes&logoColor=white&labelColor=2b2d30" alt="Kubernetes GitOps" />
+    <a href="./terraform">
+      <img src="https://img.shields.io/badge/🏛️_TERRAFORM_CAF-ENTERPRISE_MODULES-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform CAF" />
+    </a>
     &nbsp;
-    <img src="https://img.shields.io/badge/TERRAFORM_IAC-DRIFT_DETECTION_%26_MODULES-7C3AED?style=for-the-badge&logo=terraform&logoColor=white&labelColor=2b2d30" alt="Terraform Enterprise" />
+    <a href="./finops">
+      <img src="https://img.shields.io/badge/💰_FINOPS-COST_OPTIMIZATION-10B981?style=for-the-badge&logo=cashapp&logoColor=white" alt="FinOps" />
+    </a>
+    &nbsp;
+    <a href="./aiops">
+      <img src="https://img.shields.io/badge/🤖_AIOPS-PREDICTIVE_OBSERVABILITY-00D2FF?style=for-the-badge&logo=openai&logoColor=white" alt="AIOps" />
+    </a>
+    &nbsp;
+    <a href="./mlops">
+      <img src="https://img.shields.io/badge/🧠_MLOPS-CANARY_PIPELINES-2563EB?style=for-the-badge&logo=azuredevops&logoColor=white" alt="MLOps" />
+    </a>
   </p>
 
+  <!-- Core Enterprise Status Indicators -->
   <p align="center">
-    <img src="https://img.shields.io/badge/AGENTIC_AI-MCP_%7C_RAG_%7C_LANGGRAPH-8B5CF6?style=for-the-badge&logo=openai&logoColor=white&labelColor=2b2d30" alt="Agentic AI" />
+    <img src="https://img.shields.io/badge/CONTROL_PLANE-ONLINE-00D2FF?style=for-the-badge&logo=azurepipelines&logoColor=white&labelColor=1a1f2c" alt="Control Plane Online" />
     &nbsp;
-    <img src="https://img.shields.io/badge/DEVSECOPS-SHIFT_LEFT_CIS_V2.0-10B981?style=for-the-badge&logo=securityscorecard&logoColor=white&labelColor=2b2d30" alt="DevSecOps CIS" />
+    <img src="https://img.shields.io/badge/ENTERPRISE_AZURE-CAF_%26_LANDING_ZONES-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white&labelColor=1a1f2c" alt="Enterprise Azure CAF" />
     &nbsp;
-    <img src="https://img.shields.io/badge/FINOPS-RIGHTSIZING_%26_SAVINGS_PLANS-F59E0B?style=for-the-badge&logo=cashapp&logoColor=white&labelColor=2b2d30" alt="FinOps Savings" />
+    <img src="https://img.shields.io/badge/ZERO_TRUST-GITOPS_ACTIVE-10B981?style=for-the-badge&logo=kubernetes&logoColor=white&labelColor=1a1f2c" alt="Zero Trust GitOps" />
   </p>
 
   <!-- Interactive Action & Engagement Badges -->
   <p align="center">
     <a href="https://linkedin.com/in/avinashkean">
-      <img src="https://img.shields.io/badge/LinkedIn-Connect_Executive-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2b2d30" alt="Connect Executive" />
+      <img src="https://img.shields.io/badge/LinkedIn-Connect_Executive-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1a1f2c" alt="Connect Executive" />
     </a>
     &nbsp;
     <a href="mailto:avinashkean@gmail.com">
-      <img src="https://img.shields.io/badge/Email-Direct_Inquiry-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=2b2d30" alt="Direct Inquiry" />
+      <img src="https://img.shields.io/badge/Email-Direct_Inquiry-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1a1f2c" alt="Direct Inquiry" />
     </a>
     &nbsp;
     <a href="mailto:avinashkean@gmail.com?subject=Schedule%20Architecture%20Review">
-      <img src="https://img.shields.io/badge/Calendly-Schedule_Architecture_Review-006BFF?style=for-the-badge&logo=calendly&logoColor=white&labelColor=2b2d30" alt="Schedule Review" />
+      <img src="https://img.shields.io/badge/Calendly-Schedule_Architecture_Review-006BFF?style=for-the-badge&logo=calendly&logoColor=white&labelColor=1a1f2c" alt="Schedule Review" />
     </a>
     &nbsp;
     <a href="./blueprints/02-100-workload-cloud-migration-playbook.md">
-      <img src="https://img.shields.io/badge/Architecture_Playbook-100%2B_Migrations-FF6B00?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=2b2d30" alt="100+ Migrations Playbook" />
+      <img src="https://img.shields.io/badge/Architecture_Playbook-100%2B_Migrations-FF6B00?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=1a1f2c" alt="100+ Migrations Playbook" />
     </a>
   </p>
 
-  <!-- Dynamic Typing Subtitle -->
+  <!-- GitHub Live Dynamic Trophies -->
   <p align="center">
-    <a href="https://readme-typing-svg.demolab.com">
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3000&pause=1000&color=00D2FF&center=true&vCenter=true&width=860&height=42&lines=Principal+Cloud+%26+DevSecOps+Enterprise+Architect;13%2B+Years+Total+Engineering+Experience+%7C+6%2B+Years+Cloud+%26+DevOps;100%2B+Enterprise+Workloads+Migrated+to+Azure+Cloud;Azure+Landing+Zone+(CAF)+%26+Zero-Trust+Architect;Terraform+Enterprise+IaC+%26+Automated+GitOps+CI%2FCD;FinOps+Cloud+Cost+Optimization+%26+High-Availability+BCDR" alt="Typing SVG" />
+    <a href="https://github.com/ryo-ma/github-profile-trophy">
+      <img src="https://github-profile-trophy.vercel.app/?username=avinashkean-cpu&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8" alt="GitHub Trophies" />
     </a>
   </p>
 
