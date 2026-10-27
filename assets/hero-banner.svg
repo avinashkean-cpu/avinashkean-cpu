@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="50%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Border Glow -->
+    <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="35%" stop-color="#0078D4" />
+      <stop offset="70%" stop-color="#7928CA" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161f33" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0e1726" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#A78BFA" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#0078D4" />
+    </linearGradient>
+
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00D2FF" stop-opacity="1" />
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="1" />
+      <stop offset="80%" stop-color="#10B981" stop-opacity="1" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.6"/>
+      <circle cx="30" cy="30" r="1" fill="#38bdf8" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .terminal-dot { transition: all 0.3s ease; }
+    .title-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 800; letter-spacing: 2px; }
+    .subtitle-text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: 600; letter-spacing: 3px; }
+    .code-font { font-family: 'Fira Code', 'SF Mono', Consolas, monospace; }
+    .card-title { font-family: 'Segoe UI', sans-serif; font-weight: 700; font-size: 22px; }
+    .card-sub { font-family: 'Segoe UI', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.5px; fill: #94a3b8; }
+  </style>
+
+  <!-- Main Background Container -->
+  <rect x="2" y="2" width="1196" height="436" rx="16" fill="url(#bgGrad)" stroke="url(#borderGlow)" stroke-width="2.5"/>
+
+  <!-- Subtle Cyber Grid -->
+  <rect x="3" y="3" width="1194" height="434" rx="15" fill="url(#grid)"/>
+
+  <!-- Top Terminal Bar -->
+  <rect x="3" y="3" width="1194" height="38" rx="15" fill="#090d16" fill-opacity="0.9"/>
+  <rect x="3" y="35" width="1194" height="6" fill="#090d16"/>
+  <line x1="3" y1="41" x2="1197" y2="41" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Terminal Window Controls -->
+  <circle cx="28" cy="22" r="6" fill="#ef4444" class="terminal-dot"/>
+  <circle cx="48" cy="22" r="6" fill="#f59e0b" class="terminal-dot"/>
+  <circle cx="68" cy="22" r="6" fill="#10b981" class="terminal-dot"/>
+
+  <!-- Top Status Pill Badges -->
+  <g transform="translate(110, 12)">
+    <rect x="0" y="0" width="165" height="20" rx="4" fill="#131b2e" stroke="#1e293b"/>
+    <circle cx="10" cy="10" r="4" fill="#00D2FF"/>
+    <text x="22" y="14" fill="#38BDF8" font-size="10.5" class="code-font" font-weight="600">CONTROL PLANE: ONLINE</text>
+  </g>
+
+  <g transform="translate(290, 12)">
+    <rect x="0" y="0" width="155" height="20" rx="4" fill="#131b2e" stroke="#1e293b"/>
+    <circle cx="10" cy="10" r="4" fill="#10B981"/>
+    <text x="22" y="14" fill="#34D399" font-size="10.5" class="code-font" font-weight="600">ZERO TRUST: ACTIVE</text>
+  </g>
+
+  <g transform="translate(460, 12)">
+    <rect x="0" y="0" width="170" height="20" rx="4" fill="#131b2e" stroke="#1e293b"/>
+    <circle cx="10" cy="10" r="4" fill="#F59E0B"/>
+    <text x="22" y="14" fill="#FBBF24" font-size="10.5" class="code-font" font-weight="600">AZURE CAF: PRODUCTION</text>
+  </g>
+
+  <text x="1170" y="25" text-anchor="end" fill="#64748b" font-size="11" class="code-font">v2.6.0-enterprise</text>
+
+  <!-- Central Hero Content -->
+  <g transform="translate(60, 85)">
+    <!-- Architecture Tagline -->
+    <text x="0" y="24" fill="#00D2FF" font-size="13" class="code-font" font-weight="700" letter-spacing="1.5">
+      // ENTERPRISE CLOUD ARCHITECTURE &amp; DEVSECOPS EXCELLENCE
+    </text>
+
+    <!-- Main Name -->
+    <text x="0" y="78" fill="url(#nameGrad)" font-size="52" class="title-text">
+      AVINASH MISHRA
+    </text>
+
+    <!-- Role Subtitle -->
+    <text x="2" y="112" fill="#e2e8f0" font-size="18" class="subtitle-text">
+      PRINCIPAL CLOUD &amp; DEVSECOPS ENTERPRISE ARCHITECT
+    </text>
+
+    <!-- Core Philosophy Statement -->
+    <text x="2" y="138" fill="#94a3b8" font-size="13.5" font-family="'Segoe UI', sans-serif">
+      Architecting Resilient Azure Landing Zones (CAF) • 100+ Workload DC Migrations • Zero-Trust GitOps • FinOps Economics
+    </text>
+  </g>
+
+  <!-- Glowing Accent Divider Line -->
+  <rect x="50" y="255" width="1100" height="2" fill="url(#accentLine)"/>
+
+  <!-- Bottom Metric & Capability Cards -->
+  <!-- Card 1: Experience -->
+  <g transform="translate(50, 275)">
+    <rect x="0" y="0" width="204" height="130" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="16" y="16" width="36" height="36" rx="8" fill="#0284c7" fill-opacity="0.2"/>
+    <text x="34" y="40" text-anchor="middle" fill="#38bdf8" font-size="18">💼</text>
+    <text x="62" y="32" fill="#38BDF8" class="card-title">13+ YRS</text>
+    <text x="62" y="48" fill="#94a3b8" font-size="10" class="code-font">TOTAL ENGINEERING</text>
+    <text x="16" y="80" class="card-sub">Systems Leadership &amp;</text>
+    <text x="16" y="96" class="card-sub">Techno-Functional Delivery</text>
+    <text x="16" y="114" fill="#00D2FF" font-size="10" class="code-font" font-weight="600">Enterprise Grade</text>
+  </g>
+
+  <!-- Card 2: Cloud / DevOps -->
+  <g transform="translate(274, 275)">
+    <rect x="0" y="0" width="204" height="130" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="16" y="16" width="36" height="36" rx="8" fill="#0078D4" fill-opacity="0.2"/>
+    <text x="34" y="40" text-anchor="middle" fill="#0078D4" font-size="18">☁️</text>
+    <text x="62" y="32" fill="#60A5FA" class="card-title">6+ YRS</text>
+    <text x="62" y="48" fill="#94a3b8" font-size="10" class="code-font">CLOUD &amp; DEVSECOPS</text>
+    <text x="16" y="80" class="card-sub">Azure CAF Landing Zones,</text>
+    <text x="16" y="96" class="card-sub">Terraform &amp; DevSecOps CI/CD</text>
+    <text x="16" y="114" fill="#60A5FA" font-size="10" class="code-font" font-weight="600">Trunk-Based GitOps</text>
+  </g>
+
+  <!-- Card 3: Migrations -->
+  <g transform="translate(498, 275)">
+    <rect x="0" y="0" width="204" height="130" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="16" y="16" width="36" height="36" rx="8" fill="#10b981" fill-opacity="0.2"/>
+    <text x="34" y="40" text-anchor="middle" fill="#10b981" font-size="18">🚀</text>
+    <text x="62" y="32" fill="#34D399" class="card-title">100+ APPS</text>
+    <text x="62" y="48" fill="#94a3b8" font-size="10" class="code-font">WORKLOAD MIGRATION</text>
+    <text x="16" y="80" class="card-sub">On-Prem DC to Azure Cloud</text>
+    <text x="16" y="96" class="card-sub">Dev, UAT &amp; Prod Cutover</text>
+    <text x="16" y="114" fill="#34D399" font-size="10" class="code-font" font-weight="600">Zero Unplanned Outage</text>
+  </g>
+
+  <!-- Card 4: FinOps -->
+  <g transform="translate(722, 275)">
+    <rect x="0" y="0" width="204" height="130" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="16" y="16" width="36" height="36" rx="8" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="34" y="40" text-anchor="middle" fill="#f59e0b" font-size="18">💰</text>
+    <text x="62" y="32" fill="#FBBF24" class="card-title">40%+ SAVE</text>
+    <text x="62" y="48" fill="#94a3b8" font-size="10" class="code-font">FINOPS OPTIMIZATION</text>
+    <text x="16" y="80" class="card-sub">Rightsizing, RI/Savings Plans,</text>
+    <text x="16" y="96" class="card-sub">Auto-scheduling &amp; Log DCRs</text>
+    <text x="16" y="114" fill="#FBBF24" font-size="10" class="code-font" font-weight="600">Continuous Auditing</text>
+  </g>
+
+  <!-- Card 5: PreSales & Governance -->
+  <g transform="translate(946, 275)">
+    <rect x="0" y="0" width="204" height="130" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.2"/>
+    <rect x="16" y="16" width="36" height="36" rx="8" fill="#8b5cf6" fill-opacity="0.2"/>
+    <text x="34" y="40" text-anchor="middle" fill="#8b5cf6" font-size="18">🤝</text>
+    <text x="62" y="32" fill="#C084FC" class="card-title">RFP / SOW</text>
+    <text x="62" y="48" fill="#94a3b8" font-size="10" class="code-font">LEADERSHIP &amp; TAM</text>
+    <text x="16" y="80" class="card-sub">Technical Evaluation Matrix,</text>
+    <text x="16" y="96" class="card-sub">Vendor Governance &amp; RACI</text>
+    <text x="16" y="114" fill="#C084FC" font-size="10" class="code-font" font-weight="600">Client Advisory</text>
+  </g>
+
+</svg>

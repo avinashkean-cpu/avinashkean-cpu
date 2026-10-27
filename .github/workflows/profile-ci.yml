@@ -1,0 +1,40 @@
+name: Enterprise Profile & Architecture CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate-markdown-and-scripts:
+    name: Lint Architecture Blueprints & Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Validate Markdown Structure
+        run: |
+          echo "Validating Markdown Blueprints & Documentation..."
+          test -f README.md || exit 1
+          test -d blueprints || exit 1
+          test -d scripts || exit 1
+          echo "All enterprise assets present and verified."
+
+      - name: PowerShell Script Syntax Verification
+        shell: pwsh
+        run: |
+          $scripts = Get-ChildItem -Path ./scripts -Recurse -Filter *.ps1
+          foreach ($script in $scripts) {
+            Write-Host "Verifying syntax for $($script.FullName)..."
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($script.FullName, [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              Write-Error "Syntax errors found in $($script.Name)"
+              exit 1
+            }
+          }
+          Write-Host "All PowerShell enterprise automation scripts parsed cleanly!"

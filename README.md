@@ -1,39 +1,55 @@
 <div align="center">
 
-  <!-- Hero Banner -->
-  <img src="assets/banner.jpg" alt="Avinash Mishra - Enterprise Cloud Architect" width="100%" style="border-radius: 12px; max-height: 380px; object-fit: cover;" />
+  <!-- Custom High-Tech Vector SVG Hero Banner -->
+  <img src="assets/hero-banner.svg" alt="Avinash Mishra - Principal Cloud & DevSecOps Enterprise Architect" width="100%" style="border-radius: 14px; margin-bottom: 12px;" />
 
-  <br/><br/>
+  <br/>
 
-  <!-- Heading & Subtitle -->
-  <h1>⚡ AVINASH MISHRA ⚡</h1>
-  
+  <!-- User's Signature High-Contrast Dual-Tone Skill & Profile Badges -->
   <p align="center">
-    <a href="https://readme-typing-svg.demolab.com">
-      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00D2FF&center=true&vCenter=true&width=850&height=45&lines=Principal+Cloud+%26+DevSecOps+Enterprise+Architect;13%2B+Years+Total+Engineering+Experience+%7C+6%2B+Years+Cloud+%26+DevOps;100%2B+Enterprise+Workloads+Migrated+to+Azure+Cloud;Azure+Landing+Zone+(CAF)+%26+Zero-Trust+Architect;Terraform+Enterprise+IaC+%26+Automated+GitOps+CI%2FCD;FinOps+Cloud+Cost+Optimization+%26+High-Availability+BCDR" alt="Typing SVG" />
+    <img src="https://img.shields.io/badge/CONTROL_PLANE-ONLINE-00D2FF?style=for-the-badge&logo=azurepipelines&logoColor=white&labelColor=2b2d30" alt="Control Plane Online" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/ENTERPRISE_AZURE-CAF_%26_LANDING_ZONES-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white&labelColor=2b2d30" alt="Enterprise Azure CAF" />
+  </p>
+
+  <p align="center">
+    <img src="https://img.shields.io/badge/KUBERNETES-ZERO_TRUST_GITOPS-2563EB?style=for-the-badge&logo=kubernetes&logoColor=white&labelColor=2b2d30" alt="Kubernetes GitOps" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/TERRAFORM_IAC-DRIFT_DETECTION_%26_MODULES-7C3AED?style=for-the-badge&logo=terraform&logoColor=white&labelColor=2b2d30" alt="Terraform Enterprise" />
+  </p>
+
+  <p align="center">
+    <img src="https://img.shields.io/badge/AGENTIC_AI-MCP_%7C_RAG_%7C_LANGGRAPH-8B5CF6?style=for-the-badge&logo=openai&logoColor=white&labelColor=2b2d30" alt="Agentic AI" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/DEVSECOPS-SHIFT_LEFT_CIS_V2.0-10B981?style=for-the-badge&logo=securityscorecard&logoColor=white&labelColor=2b2d30" alt="DevSecOps CIS" />
+    &nbsp;
+    <img src="https://img.shields.io/badge/FINOPS-RIGHTSIZING_%26_SAVINGS_PLANS-F59E0B?style=for-the-badge&logo=cashapp&logoColor=white&labelColor=2b2d30" alt="FinOps Savings" />
+  </p>
+
+  <!-- Interactive Action & Engagement Badges -->
+  <p align="center">
+    <a href="https://linkedin.com/in/avinashkean">
+      <img src="https://img.shields.io/badge/LinkedIn-Connect_Executive-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2b2d30" alt="Connect Executive" />
+    </a>
+    &nbsp;
+    <a href="mailto:avinashkean@gmail.com">
+      <img src="https://img.shields.io/badge/Email-Direct_Inquiry-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=2b2d30" alt="Direct Inquiry" />
+    </a>
+    &nbsp;
+    <a href="mailto:avinashkean@gmail.com?subject=Schedule%20Architecture%20Review">
+      <img src="https://img.shields.io/badge/Calendly-Schedule_Architecture_Review-006BFF?style=for-the-badge&logo=calendly&logoColor=white&labelColor=2b2d30" alt="Schedule Review" />
+    </a>
+    &nbsp;
+    <a href="./blueprints/02-100-workload-cloud-migration-playbook.md">
+      <img src="https://img.shields.io/badge/Architecture_Playbook-100%2B_Migrations-FF6B00?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=2b2d30" alt="100+ Migrations Playbook" />
     </a>
   </p>
 
+  <!-- Dynamic Typing Subtitle -->
   <p align="center">
-    <b>Enterprise Cloud & Infrastructure Architect</b> specializing in large-scale Azure transformations, Cloud Adoption Framework (CAF) Landing Zones, Zero-Trust network topologies, automated DevSecOps pipelines, and FinOps economics.
-  </p>
-
-  <!-- High-Level Badges -->
-  <p align="center">
-    <img src="https://img.shields.io/badge/Total_Experience-13%2B_Years-0078D4?style=for-the-badge&logo=azure&logoColor=white" alt="Total Experience" />
-    <img src="https://img.shields.io/badge/Cloud_&_DevOps-6%2B_Years-00B4D8?style=for-the-badge&logo=terraform&logoColor=white" alt="Cloud Experience" />
-    <img src="https://img.shields.io/badge/Workload_Migrations-100%2B_Apps-10B981?style=for-the-badge&logo=azuredevops&logoColor=white" alt="Migrations" />
-    <img src="https://img.shields.io/badge/Architecture-Azure_CAF_&_Zero--Trust-7928CA?style=for-the-badge&logo=securityscorecard&logoColor=white" alt="Architecture" />
-    <img src="https://img.shields.io/badge/FinOps-Cost_Optimization-F59E0B?style=for-the-badge&logo=cashapp&logoColor=white" alt="FinOps" />
-  </p>
-
-  <!-- Quick Action Buttons -->
-  <p align="center">
-    <a href="mailto:avinashkean@gmail.com"><img src="https://img.shields.io/badge/Email-avinashkean%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-    <a href="https://linkedin.com/in/avinashkean"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-    <a href="#-enterprise-architecture-blueprint"><img src="https://img.shields.io/badge/Architecture-Blueprints-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="Blueprints" /></a>
-    <a href="#-7-core-engineering--leadership-pillars"><img src="https://img.shields.io/badge/Deep_Dive-7_Pillars-10B981?style=flat-square&logo=gitbook&logoColor=white" alt="Pillars" /></a>
-    <a href="https://github.com/avinashkean-cpu?tab=repositories"><img src="https://img.shields.io/badge/GitHub-Repositories-181717?style=flat-square&logo=github&logoColor=white" alt="Repositories" /></a>
+    <a href="https://readme-typing-svg.demolab.com">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3000&pause=1000&color=00D2FF&center=true&vCenter=true&width=860&height=42&lines=Principal+Cloud+%26+DevSecOps+Enterprise+Architect;13%2B+Years+Total+Engineering+Experience+%7C+6%2B+Years+Cloud+%26+DevOps;100%2B+Enterprise+Workloads+Migrated+to+Azure+Cloud;Azure+Landing+Zone+(CAF)+%26+Zero-Trust+Architect;Terraform+Enterprise+IaC+%26+Automated+GitOps+CI%2FCD;FinOps+Cloud+Cost+Optimization+%26+High-Availability+BCDR" alt="Typing SVG" />
+    </a>
   </p>
 
 </div>
@@ -72,6 +88,26 @@ With **13+ years of overall engineering excellence** and **6+ years deeply speci
 │ Central Egress / Policy  │  Optimization Delivered  │     Multi-Region BCDR & VMSS     │
 └──────────────────────────┴──────────────────────────┴──────────────────────────────────┘
 ```
+
+---
+
+## 📚 Enterprise Architecture Blueprints & Production Artifacts
+
+This repository is designed as an **Enterprise Cloud Architecture Center of Excellence (CCoE)**. Explore the production-ready blueprints and automation runbooks below:
+
+| # | Architecture Blueprint & Artifact | Strategic Focus |
+| :-: | :--- | :--- |
+| **01** | [🏛️ Azure Enterprise Landing Zone (CAF)](./blueprints/01-azure-enterprise-landing-zone-caf.md) | Tenant root hierarchy, Management Groups, Hub & Spoke VNet, Azure Firewall, UDRs, and Azure Policy initiatives. |
+| **02** | [🚀 100+ Workload Cloud Migration Playbook](./blueprints/02-100-workload-cloud-migration-playbook.md) | 6-Phase DC-to-Cloud migration lifecycle, 6-R assessment, cutover maintenance windows, and 24/7 hypercare. |
+| **03** | [💰 FinOps & Cloud Economics Engineering](./blueprints/03-finops-cloud-cost-optimization-framework.md) | Compute rightsizing, unattached disk purge, non-prod auto-schedules, and Reserved Instances (RI) modeling. |
+| **04** | [🛡️ DevSecOps Pipeline & GitOps Architecture](./blueprints/04-enterprise-devsecops-pipeline-architecture.md) | Trunk-based GitOps, branch policies, PR security gates (tfsec, checkov, infracost), and drift detection. |
+| **05** | [🌐 BCDR & High Availability Strategy](./blueprints/05-bcdr-and-high-availability-strategy.md) | Storage redundancy (LRS, ZRS, GRS), VMSS across Availability Zones, RTO < 1h, RPO < 15m, and ASR drills. |
+| **06** | [🤝 Vendor Governance & PreSales Matrix](./blueprints/06-vendor-governance-and-presales-matrix.md) | RFP/RFI responses, Technical Evaluation Matrices, SOW formulation, RACI governance, and milestone releases. |
+
+### ⚙️ Production Automation Tooling
+- ⚡ **[Orphaned Disk FinOps Audit Script](./scripts/finops/cleanup-orphaned-disks.ps1)** — PowerShell tool to scan and audit unattached disks & idle public IPs.
+- ⚡ **[Non-Prod VM Auto-Scheduler](./scripts/finops/auto-start-stop-vms.ps1)** — Automated runbook for scheduled VM stop/start, reducing non-prod compute spend by up to 70%.
+- ⚡ **[Terraform Drift Detection Pipeline](./scripts/governance/terraform-drift-detector.ps1)** — Automated CI/CD script to identify unauthorized portal modifications.
 
 ---
 
