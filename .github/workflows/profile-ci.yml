@@ -1,4 +1,4 @@
-name: Enterprise Profile & Architecture CI
+name: Enterprise Architecture & Code Quality CI
 
 on:
   push:
@@ -8,25 +8,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  validate-markdown-and-scripts:
-    name: Lint Architecture Blueprints & Scripts
+  validate-infrastructure-and-code:
+    name: Lint & Validate Architecture, Terraform, FinOps, AIOps, MLOps
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Validate Markdown Structure
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.5.7
+
+      - name: Validate Terraform Formatting
         run: |
-          echo "Validating Markdown Blueprints & Documentation..."
-          test -f README.md || exit 1
-          test -d blueprints || exit 1
-          test -d scripts || exit 1
-          echo "All enterprise assets present and verified."
+          echo "Checking Terraform formatting across modules and environments..."
+          terraform fmt -check -recursive terraform/ || exit 1
+          terraform fmt -check -recursive mlops/terraform/ || exit 1
+          echo "All Terraform files adhere to standard formatting."
 
       - name: PowerShell Script Syntax Verification
         shell: pwsh
         run: |
-          $scripts = Get-ChildItem -Path ./scripts -Recurse -Filter *.ps1
+          $scripts = Get-ChildItem -Path @('./scripts', './finops', './aiops') -Recurse -Filter *.ps1 -ErrorAction SilentlyContinue
           foreach ($script in $scripts) {
             Write-Host "Verifying syntax for $($script.FullName)..."
             $tokens = $null
@@ -37,4 +41,25 @@ jobs:
               exit 1
             }
           }
-          Write-Host "All PowerShell enterprise automation scripts parsed cleanly!"
+          Write-Host "All PowerShell scripts parsed cleanly!"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Validate Python Scripts
+        run: |
+          python -m py_compile aiops/detectors/telemetry-incident-analyzer.py
+          echo "All Python telemetry analyzers compiled cleanly without syntax issues!"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Validate Python Scripts
+        run: |
+          python -m py_compile aiops/detectors/telemetry-incident-analyzer.py
+          echo "All Python telemetry analyzers compiled cleanly without syntax issues!"
+

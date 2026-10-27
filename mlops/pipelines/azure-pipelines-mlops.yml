@@ -1,0 +1,89 @@
+# =========================================================================
+# Enterprise MLOps CI/CD Automation Pipeline
+# Azure DevOps / GitHub Actions Compatible YAML Pipeline
+# Stages: Model Validation -> Distributed Training -> Registry -> Canary Deploy
+# Author: Avinash Mishra (Principal Cloud & DevSecOps Enterprise Architect)
+# =========================================================================
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - mlops/**
+
+variables:
+  - name: azureServiceConnection
+    value: 'spn-enterprise-mlops-prod'
+  - name: mlWorkspaceName
+    value: 'enterprise-aml-workspace'
+  - name: resourceGroup
+    value: 'rg-enterprise-mlops-prod'
+
+stages:
+  - stage: LintAndValidate
+    displayName: 'Stage 1: Code Linting & Data Integrity'
+    jobs:
+      - job: QualityGates
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '3.10'
+          - script: |
+              python -m pip install flake8 pytest black
+              black --check mlops/
+              flake8 mlops/ --max-line-length=120
+            displayName: 'Enforce Python Code Style Standards'
+
+  - stage: TrainAndEvaluate
+    displayName: 'Stage 2: Model Training & MLflow Experiment Tracking'
+    dependsOn: LintAndValidate
+    jobs:
+      - job: TrainModel
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Submitting Azure ML Pipeline Job to Compute Cluster..."
+              az ml job create --file mlops/pipelines/train-job.yml \
+                --resource-group $(resourceGroup) \
+                --workspace-name $(mlWorkspaceName)
+            displayName: 'Execute Distributed Training on AML Compute'
+
+  - stage: ModelRegistry
+    displayName: 'Stage 3: Governance & Model Registration'
+    dependsOn: TrainAndEvaluate
+    jobs:
+      - job: RegisterModel
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Registering validated model artifact in AML Model Registry..."
+              az ml model create --name "enterprise-predictive-engine" \
+                --version "1.0.0" \
+                --type "mlflow_model" \
+                --path "azureml://jobs/latest/outputs/artifacts/model" \
+                --resource-group $(resourceGroup) \
+                --workspace-name $(mlWorkspaceName)
+            displayName: 'Register Model with Version Pinning'
+
+  - stage: CanaryDeployment
+    displayName: 'Stage 4: Zero-Downtime Blue/Green Inference Deployment'
+    dependsOn: ModelRegistry
+    jobs:
+      - job: DeployCanaryEndpoint
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Deploying Green version with 10% Canary traffic split..."
+              az ml online-endpoint update --name "enterprise-inference-api" \
+                --traffic "blue=90 green=10" \
+                --resource-group $(resourceGroup) \
+                --workspace-name $(mlWorkspaceName)
+            displayName: 'Canary Traffic Splitting (90/10)'
+

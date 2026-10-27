@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "budgetName": {
+      "type": "string",
+      "defaultValue": "Enterprise-Quarterly-Cost-Ceiling"
+    },
+    "amount": {
+      "type": "int",
+      "defaultValue": 25000
+    },
+    "contactEmail": {
+      "type": "string",
+      "defaultValue": "finops-governance@enterprise.com"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Consumption/budgets",
+      "apiVersion": "2021-10-01",
+      "name": "[parameters('budgetName')]",
+      "properties": {
+        "timeGrain": "Monthly",
+        "category": "Cost",
+        "amount": "[parameters('amount')]",
+        "notifications": {
+          "Actual_80_Percent": {
+            "enabled": true,
+            "operator": "GreaterThan",
+            "threshold": 80,
+            "contactEmails": ["[parameters('contactEmail')]"],
+            "thresholdType": "Actual"
+          },
+          "Forecasted_100_Percent": {
+            "enabled": true,
+            "operator": "GreaterThan",
+            "threshold": 100,
+            "contactEmails": ["[parameters('contactEmail')]"],
+            "thresholdType": "Forecasted"
+          }
+        }
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://azuremlschemas.azureedge.net/latest/managedOnlineEndpoint.schema.json",
+  "name": "enterprise-inference-api",
+  "auth_mode": "key",
+  "traffic": {
+    "blue-deployment": 90,
+    "green-canary": 10
+  },
+  "tags": {
+    "Environment": "Production",
+    "Architecture": "BlueGreenCanary",
+    "ManagedBy": "MLOps-Pipeline"
+  }
+}
+

@@ -1,0 +1,17 @@
+version: 0.1
+
+# Infracost Enterprise Configuration for CI/CD Pull Request Cost Breakdown
+projects:
+  - path: terraform/environments/production
+    name: Azure-Production-Landing-Zone
+    terraform_var_files:
+      - terraform.tfvars.example
+
+  - path: terraform/modules/networking
+    name: Hub-and-Spoke-Network-Module
+
+  - path: terraform/modules/enterprise-aks
+    name: Private-AKS-Container-Platform
+
+currency: USD
+

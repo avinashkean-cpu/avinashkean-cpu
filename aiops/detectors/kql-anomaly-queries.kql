@@ -1,0 +1,36 @@
+// =========================================================================
+// Enterprise AIOps: Production KQL Telemetry & Anomaly Detection Queries
+// Platform: Azure Monitor, Log Analytics, Sentinel & Application Insights
+// Author: Avinash Mishra (Principal Cloud & DevSecOps Enterprise Architect)
+// =========================================================================
+
+// 1. Machine Learning Metric Anomaly Detection using Time-Series Decomposition
+// Detects uncharacteristic spikes or dips in average VM CPU consumption
+let timeframe = 14d;
+let sampleRate = 1h;
+InsightsMetrics
+| where TimeGenerated >= ago(timeframe)
+| where Origin == "vm.azm.ms" and Namespace == "Processor" and Name == "UtilizationPercentage"
+| make-series AvgCPU = avg(Val) default=0 on TimeGenerated step sampleRate by Computer
+| extend (Anomalies, Score, Baseline) = series_decompose_anomalies(AvgCPU, 2.5, -1, 'linefit')
+| render anomalychart with(anomalycolumns=Anomalies, title="AIOps: Dynamic CPU Utilization Anomaly Detection")
+
+// 2. HTTP 5xx Server Error Surge Detection across Microservices
+let start_time = ago(24h);
+AppRequests
+| where TimeGenerated >= start_time
+| where ResultCode startswith "5"
+| summarize ErrorCount = count() by bin(TimeGenerated, 5m), OperationName
+| make-series Trend = count() default=0 on TimeGenerated step 5m by OperationName
+| extend (Anomalies, Score, Baseline) = series_decompose_anomalies(Trend, 3.0)
+| mv-expand TimeGenerated to typeof(datetime), Trend to typeof(double), Anomalies to typeof(int)
+| where Anomalies > 0
+| project TimeGenerated, OperationName, Trend, Anomalies
+
+// 3. AKS Container CrashLoopBackOff & OOMKilled Anomaly Tracker
+KubePodInventory
+| where TimeGenerated >= ago(6h)
+| where PodStatus in ("CrashLoopBackOff", "OOMKilled", "Error")
+| summarize FailureCount = count(), LastFailure = max(TimeGenerated) by ClusterName, Namespace, Name, PodStatus
+| order by FailureCount desc
+

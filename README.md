@@ -91,9 +91,22 @@ With **13+ years of overall engineering excellence** and **6+ years deeply speci
 
 ---
 
-## 📚 Enterprise Architecture Blueprints & Production Artifacts
+## 📚 Enterprise Architecture Blueprints & Production Code Catalog
 
-This repository is designed as an **Enterprise Cloud Architecture Center of Excellence (CCoE)**. Explore the production-ready blueprints and automation runbooks below:
+This repository is designed as an **Enterprise Cloud Architecture Center of Excellence (CCoE)**. Explore the production-ready code repositories, blueprints, and automation toolchains below:
+
+### 🚀 Production Code Repositories & Modules
+
+| Domain | Architecture Path | Key Technologies & Implemented Capabilities |
+| :--- | :--- | :--- |
+| **🏛️ Enterprise Terraform** | **[`terraform/`](./terraform)** | Modular Azure CAF Landing Zones: Hub-and-Spoke VNet, Azure Firewall Premium (IDPS), Custom Policy Initiatives, Hardened Key Vault with Private Endpoints, and Private AKS Cluster with Workload Identity. |
+| **💰 FinOps Cloud Economics** | **[`finops/`](./finops)** | Orphaned managed disk purge runbooks, idle public IP scanners, Infracost automated PR cost breakdown, and Azure Budget variance policies. |
+| **🤖 AIOps Observability** | **[`aiops/`](./aiops)** | KQL ML time-series anomaly detection, Python statistical Z-score telemetry analyzer, and automated self-healing restart runbooks. |
+| **🧠 MLOps Lifecycle** | **[`mlops/`](./mlops)** | Azure ML Workspace v2 IaC, auto-scaling 0-node compute cluster, and automated CI/CD pipeline for model registry & blue-green canary deployment. |
+
+---
+
+### 📑 Strategic Architecture Blueprints & Playbooks
 
 | # | Architecture Blueprint & Artifact | Strategic Focus |
 | :-: | :--- | :--- |
@@ -105,8 +118,10 @@ This repository is designed as an **Enterprise Cloud Architecture Center of Exce
 | **06** | [🤝 Vendor Governance & PreSales Matrix](./blueprints/06-vendor-governance-and-presales-matrix.md) | RFP/RFI responses, Technical Evaluation Matrices, SOW formulation, RACI governance, and milestone releases. |
 
 ### ⚙️ Production Automation Tooling
-- ⚡ **[Orphaned Disk FinOps Audit Script](./scripts/finops/cleanup-orphaned-disks.ps1)** — PowerShell tool to scan and audit unattached disks & idle public IPs.
-- ⚡ **[Non-Prod VM Auto-Scheduler](./scripts/finops/auto-start-stop-vms.ps1)** — Automated runbook for scheduled VM stop/start, reducing non-prod compute spend by up to 70%.
+- ⚡ **[Orphaned Disk FinOps Audit Script](./finops/scripts/cleanup-orphaned-disks.ps1)** — PowerShell tool to scan and audit unattached disks & idle public IPs.
+- ⚡ **[Non-Prod VM Auto-Scheduler](./finops/scripts/auto-start-stop-vms.ps1)** — Automated runbook for scheduled VM stop/start, reducing non-prod compute spend by up to 70%.
+- ⚡ **[Unattached Public IP Audit Tool](./finops/scripts/unattached-public-ip-audit.ps1)** — Scans for unattached IPs and calculates projected annual savings.
+- ⚡ **[AIOps Telemetry Incident Analyzer](./aiops/detectors/telemetry-incident-analyzer.py)** — Python Z-score anomaly detector and self-healing trigger.
 - ⚡ **[Terraform Drift Detection Pipeline](./scripts/governance/terraform-drift-detector.ps1)** — Automated CI/CD script to identify unauthorized portal modifications.
 
 ---
